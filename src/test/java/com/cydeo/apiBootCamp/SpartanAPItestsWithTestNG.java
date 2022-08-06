@@ -97,10 +97,10 @@ public class SpartanAPItestsWithTestNG {
         // chain methods even without using Hemcrest Matchers, however we need this Matchers library for the header and body part assertions
 
         given().log().all()
-            .accept(ContentType.JSON)
+                .accept(ContentType.JSON)
                 .and().queryParam("nameContains", "Fe")
                 .and().queryParam("gender", "Female")
-           .when()
+                .when()
                 .get(spartanUrl + "/api/spartans/search")
                 .then().assertThat().statusCode(200).contentType("application/json")  // for this part no need for Hemcrest Matchers
                 .assertThat().header("Transfer-Encoding",Matchers.equalTo("chunked"))
@@ -125,7 +125,5 @@ public class SpartanAPItestsWithTestNG {
 
 
     }
-
-
 
 }

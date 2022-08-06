@@ -26,5 +26,7 @@ public class BasicNavigationSeleniumReview {
 
         if(expectedTitle.equals(actualTitle))
             System.out.println("Title test passed");
+
+        driver.quit();
     }
 }
